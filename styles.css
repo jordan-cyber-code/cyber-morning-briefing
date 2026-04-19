@@ -552,7 +552,20 @@ button { font-family: inherit; color: inherit; background: transparent; border: 
 @media (max-width: 900px) {
   .main { grid-template-columns: 1fr; }
   .sidebar { display: none; }
-  .topbar { grid-template-columns: 1fr auto; }
+  .topbar { grid-template-columns: 1fr; }
+  .topright { flex-wrap: wrap; gap: 8px; }
+  .refresh-meta { font-size: 10px; }
   .datestack, .stats { display: none; }
   .toolbar { grid-template-columns: 1fr; }
+
+  /* list view — tighter columns, truncate source */
+  .lrow { grid-template-columns: 40px 14px 90px 1fr auto; gap: 6px; padding: 7px 8px; }
+  .lrow-src { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lrow-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* ticker view — tighter columns, truncate source + title */
+  .trow { grid-template-columns: 38px 10px 90px 1fr auto; gap: 6px; padding: 6px 8px; }
+  .trow-time { display: none; }
+  .trow-src { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .trow-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
